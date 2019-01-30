@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-RegessionSuite">
-                    <span>Test.xml</span>
+                    <span>TM_001_SignUp.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-RegessionSuite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-RegessionSuite" title="Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login" hash-for-method="loginWithNotActiveUser">loginWithNotActiveUser</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-RegessionSuite" title="android.kodak.testcases.checklist.TM_001_SignUp" hash-for-method="TC_001_SignUpWithValidData">TC_001_SignUpWithValidData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-RegessionSuite -->
@@ -120,16 +120,16 @@
           <div class="suite-RegessionSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login</span>
+              <span class="class-name">android.kodak.testcases.checklist.TM_001_SignUp</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="loginWithNotActiveUser">
-                  </a> <!-- loginWithNotActiveUser -->
-                  <span class="method-name">loginWithNotActiveUser</span>
+                  <a name="TC_001_SignUpWithValidData">
+                  </a> <!-- TC_001_SignUpWithValidData -->
+                  <span class="method-name">TC_001_SignUpWithValidData</span>
                   <em>
-(TC004: Log in with not active user)                  </em>
+(TC001: Verify that user can signup new account with valid data)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -137,7 +137,7 @@
         </div> <!-- panel RegessionSuite -->
         <div panel-name="test-xml-RegessionSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/quangle/eclipse-workspace-2/Kodak/Test.xml</span>
+            <span class="header-content">/home/quangle/eclipse-workspace-2/Kodak/src/test/resources/AUT_KODAK_ANDROID/TM_001_SignUp.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -159,18 +159,18 @@
   &lt;parameter name=&quot;wepwifiname&quot; value=&quot;Beisiusiu&quot;/&gt;
   &lt;parameter name=&quot;username&quot; value=&quot;qatest999&quot;/&gt;
   &lt;listeners&gt;
+    &lt;listener class-name=&quot;org.uncommons.reportng.HTMLReporter&quot;/&gt;
     &lt;listener class-name=&quot;org.uncommons.reportng.JUnitXMLReporter&quot;/&gt;
-    &lt;listener class-name=&quot;Android_Test_Kodak.android.kodak.base.KodakCustomizedHTMLReporter&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;Login cases&quot;&gt;
+  &lt;test name=&quot;SignUp cases&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login&quot;&gt;
+      &lt;class name=&quot;android.kodak.testcases.checklist.TM_001_SignUp&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;loginWithNotActiveUser&quot;/&gt;
+          &lt;include name=&quot;TC_001_SignUpWithValidData&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login --&gt;
+      &lt;/class&gt; &lt;!-- android.kodak.testcases.checklist.TM_001_SignUp --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Login cases --&gt;
+  &lt;/test&gt; &lt;!-- SignUp cases --&gt;
 &lt;/suite&gt; &lt;!-- RegessionSuite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -182,7 +182,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Login cases (1 class)</span>
+                <span class="test-name">SignUp cases (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -210,9 +210,9 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'loginWithNotActiveUser')
-data.setCell(0, 2, 'Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login')
-data.setCell(0, 3, 80062);
+data.setCell(0, 1, 'TC_001_SignUpWithValidData')
+data.setCell(0, 2, 'android.kodak.testcases.checklist.TM_001_SignUp')
+data.setCell(0, 3, 73072);
 window.suiteTableData['RegessionSuite']= { tableData: data, tableDiv: 'times-div-RegessionSuite'}
 return data;
 }
@@ -232,25 +232,17 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-RegessionSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">7 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
-              <span class="ignored-class-name">Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login</span>
+              <span class="ignored-class-name">android.kodak.testcases.checklist.TM_001_SignUp</span>
               <div class="ignored-methods-div">
-                <span class="ignored-method-name">loginLogOutWithExistedUser</span>
+                <span class="ignored-method-name">TC_003_SignUpWithInvalidEmail</span>
                 <br/>
-                <span class="ignored-method-name">loginWithGoogleAccountExisted</span>
+                <span class="ignored-method-name">TC_002_SignUpWithInvalidUsername</span>
                 <br/>
-                <span class="ignored-method-name">loginWithInvalidData</span>
-                <br/>
-                <span class="ignored-method-name">loginWithFacebookAccountNotExisted</span>
-                <br/>
-                <span class="ignored-method-name">loginWithGoogleAccountNotExisted</span>
-                <br/>
-                <span class="ignored-method-name">loginWithFaceBookAccountExisted</span>
-                <br/>
-                <span class="ignored-method-name">loginWithRememberMe</span>
+                <span class="ignored-method-name">TC_004_SignUpWithInvalidPassword</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -262,26 +254,34 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">android.kodak.testcases.checklist.TM_001_SignUp</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">loadBean</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">loadParam(samsung_c7, production, qatest999, Aaaa1111, 000007E048AF00050DANMNGF, KodakCam-F00700050D, /dev/tty...)</span>
-                <span class="method-start">1135 ms</span>
+                <span class="method-start">743 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-class before">
+                <span class="method-name">Precondition</span>
+                <span class="method-start">754 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login.loginWithNotActiveUser...)</span>
-                <span class="method-start">1149 ms</span>
+                <span class="method-name">beforeMethod(public void android.kodak.testcases.checklist.TM_001_SignUp.TC_001_SignUpWithValidData())</span>
+                <span class="method-start">1291 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">loginWithNotActiveUser</span>
-                <span class="method-start">22267 ms</span>
+                <span class="method-name">TC_001_SignUpWithValidData</span>
+                <span class="method-start">17335 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=loginWithNotActiveUser status=SUCCESS method=TM_002_Login.loginWithNotActiveUser()[...)</span>
-                <span class="method-start">102359 ms</span>
+                <span class="method-name">cleanup</span>
+                <span class="method-start">90440 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=TC_001_SignUpWithValidData status=SUCCESS method=TM_001_SignUp.TC_001_SignUpWithVal...)</span>
+                <span class="method-start">90442 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

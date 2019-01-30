@@ -1,1 +1,0 @@
-{"uuid":"0856da4c-7fb9-40aa-9f20-46eae1f4ee92","name":"Android_Test_Kodak.android.kodak.base.TestBase.afterMethod","description":"","start":1548838489083,"stop":1548838490681,"children":["49560158-fd46-4ed5-b862-a9d4650124bc"],"afters":[{"name":"afterMethod","status":"passed","stage":"finished","description":"","start":1548838489084,"stop":1548838490681}]}

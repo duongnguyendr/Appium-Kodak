@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
+<testng-results skipped="0" failed="0" ignored="3" total="4" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="RegessionSuite" duration-ms="104904" started-at="2019-01-30T09:23:14Z" finished-at="2019-01-30T09:24:59Z">
+  <suite name="RegessionSuite" duration-ms="93177" started-at="2019-01-30T10:08:08Z" finished-at="2019-01-30T10:09:41Z">
     <groups>
     </groups>
-    <test name="Login cases" duration-ms="104904" started-at="2019-01-30T09:23:14Z" finished-at="2019-01-30T09:24:59Z">
-      <class name="Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login">
-        <test-method status="PASS" signature="loadBean()[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="loadBean" is-config="true" duration-ms="1117" started-at="2019-01-30T16:23:13Z" finished-at="2019-01-30T16:23:14Z">
+    <test name="SignUp cases" duration-ms="93177" started-at="2019-01-30T10:08:08Z" finished-at="2019-01-30T10:09:41Z">
+      <class name="android.kodak.testcases.checklist.TM_001_SignUp">
+        <test-method status="PASS" signature="loadBean()[pri:0, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="loadBean" is-config="true" duration-ms="724" started-at="2019-01-30T17:08:08Z" finished-at="2019-01-30T17:08:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadBean -->
-        <test-method status="PASS" signature="loadParam(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="loadParam" is-config="true" duration-ms="2" started-at="2019-01-30T16:23:14Z" finished-at="2019-01-30T16:23:14Z">
+        <test-method status="PASS" signature="loadParam(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="loadParam" is-config="true" duration-ms="11" started-at="2019-01-30T17:08:08Z" finished-at="2019-01-30T17:08:08Z">
           <params>
             <param index="0">
               <value>
@@ -62,33 +62,41 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadParam -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="beforeMethod" is-config="true" duration-ms="21025" started-at="2019-01-30T16:23:14Z" finished-at="2019-01-30T16:23:35Z">
+        <test-method status="PASS" signature="Precondition()[pri:0, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="Precondition" is-config="true" duration-ms="525" started-at="2019-01-30T17:08:08Z" finished-at="2019-01-30T17:08:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Precondition -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="beforeMethod" is-config="true" duration-ms="15952" started-at="2019-01-30T17:08:09Z" finished-at="2019-01-30T17:08:25Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login.loginWithNotActiveUser()]]>
+                <![CDATA[public void android.kodak.testcases.checklist.TM_001_SignUp.TC_001_SignUpWithValidData()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="loginWithNotActiveUser()[pri:4, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="loginWithNotActiveUser" duration-ms="80062" started-at="2019-01-30T16:23:35Z" description="TC004: Log in with not active user" finished-at="2019-01-30T16:24:55Z">
+        <test-method status="PASS" signature="TC_001_SignUpWithValidData()[pri:1, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="TC_001_SignUpWithValidData" duration-ms="73072" started-at="2019-01-30T17:08:25Z" description="TC001: Verify that user can signup new account with valid data" finished-at="2019-01-30T17:09:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginWithNotActiveUser -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="afterMethod" is-config="true" duration-ms="3660" started-at="2019-01-30T16:24:56Z" finished-at="2019-01-30T16:24:59Z">
+        </test-method> <!-- TC_001_SignUpWithValidData -->
+        <test-method status="PASS" signature="cleanup()[pri:0, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="cleanup" is-config="true" duration-ms="1" started-at="2019-01-30T17:09:38Z" finished-at="2019-01-30T17:09:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f]" name="afterMethod" is-config="true" duration-ms="3460" started-at="2019-01-30T17:09:38Z" finished-at="2019-01-30T17:09:41Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginWithNotActiveUser status=SUCCESS method=TM_002_Login.loginWithNotActiveUser()[pri:4, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02] output={null}]]]>
+                <![CDATA[[TestResult name=TC_001_SignUpWithValidData status=SUCCESS method=TM_001_SignUp.TC_001_SignUpWithValidData()[pri:1, instance:android.kodak.testcases.checklist.TM_001_SignUp@35e478f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login -->
-    </test> <!-- Login cases -->
+      </class> <!-- android.kodak.testcases.checklist.TM_001_SignUp -->
+    </test> <!-- SignUp cases -->
   </suite> <!-- RegessionSuite -->
 </testng-results>

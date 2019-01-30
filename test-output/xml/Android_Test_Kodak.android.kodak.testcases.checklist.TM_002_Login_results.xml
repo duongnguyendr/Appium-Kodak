@@ -4,10 +4,10 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="80.062">
+           time="81.376">
   <properties />
   
   
-            <testcase name="loginWithNotActiveUser" time="80.062" classname="Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login" />
+            <testcase name="loginWithNotActiveUser" time="81.376" classname="Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login" />
       
 </testsuite>
