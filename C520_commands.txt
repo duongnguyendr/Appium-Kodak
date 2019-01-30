@@ -1,0 +1,79 @@
+melody0, melody0: -1
+melody1, melody1: 0
+melody2, melody2: 0
+melody3, melody3: 0
+melody4, melody4: 0
+melody5, melody5: 0
+melody6, melody6: -1
+melody@, melody@: -1
+melody!2, melody!2: -1
+melodystop, melodystop: 0
+melody_vol&value=1, melody_vol: 0
+melody_vol, melody_vol: 1
+melody_vol&value=2, melody_vol: 0
+melody_vol, melody_vol: 2
+melody_vol&value=3, melody_vol: 0
+melody_vol, melody_vol: 3
+melody_vol&value=4, melody_vol: 0
+melody_vol, melody_vol: 4
+melody_vol&value=5, melody_vol: 0
+melody_vol, melody_vol: 5
+melody_vol&value=6, melody_vol: -1
+melody_vol, melody_vol: 5
+melody_vol&value=-1, melody_vol: -1
+melody_vol, melody_vol: 5
+talkback_start, talkback_start: 0
+talkback_stop, talkback_stop: 0
+set_flicker&value=50, set_flicker: 0
+get_flicker, get_flicker: 50
+set_flicker&value=-40, set_flicker: -1
+get_flicker, get_flicker: 50
+set_flicker&value=60, set_flicker: 0
+get_flicker, get_flicker: 60
+fsetting_get, fsetting_get:
+set_video_bitrate&value=200, set_video_bitrate: 0
+get_video_bitrate, get_video_bitrate: 200
+set_video_bitrate&value=500, set_video_bitrate: 0
+get_video_bitrate, get_video_bitrate: 500
+set_flipup&value=-1, set_flipup: 0
+set_flipup&value=#, set_flipup: 0
+set_flipup&value=1, set_flipup: 0
+set_flipup&value=0, set_flipup: 0
+get_temp_humid, get_temp_humid:     
+get_cds, get_cds:
+get_wifi_strength, get_wifi_strength:
+get_pu_signal_strength, get_pu_signal_strength:
+set_night_vision&value=2, set_night_vision: 0
+get_night_vision, get_night_vision: 2
+set_night_vision&value=100, set_night_vision: -1
+get_night_vision, get_night_vision: 2
+set_night_vision&value=1, set_night_vision: 0
+get_night_vision, get_night_vision: 1
+set_night_vision&value=0, set_night_vision: 0
+get_night_vision, get_night_vision: 0
+set_motion_source&value=1,set_motion_source: 0
+get_motion_source, get_motion_source: 1
+set_motion_source&value=2,set_motion_source: 0
+get_motion_source, get_motion_source: 2
+set_motion_source&value=3,set_motion_source: 0
+get_motion_source, get_motion_source: 3
+set_motion_source&value=4,set_motion_source: 0
+get_motion_source, get_motion_source: 4
+set_motion_source&value=5,set_motion_source: 0
+get_motion_source, get_motion_source: 5
+set_motion_source&value=0,set_motion_source: 0
+get_motion_source, get_motion_source: 0
+set_sound_detection&value=1&sensitivity=1, set_sound_detection: 0
+set_sound_detection&value=1&sensitivity=2, set_sound_detection: 0
+set_sound_detection&value=1&sensitivity=3, set_sound_detection: 0
+set_sound_detection&value=1&sensitivity=4, set_sound_detection: 0
+set_sound_detection&value=1&sensitivity=5, set_sound_detection: 0
+set_sound_detection&value=0&sensitivity=3, set_sound_detection: 0
+set_temp_lo_threshold&value=12, set_temp_lo_threshold: 0
+set_temp_lo_threshold&value=24, set_temp_lo_threshold: 0
+set_temp_hi_threshold&value=25, set_temp_hi_threshold: 0
+set_temp_hi_threshold&value=37, set_temp_hi_threshold: 0
+get_version, get_version: 
+get_soc_version, get_soc_version: 
+get_mac_address, get_mac_address:   
+get_udid, get_udid:

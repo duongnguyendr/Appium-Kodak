@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="7" total="8" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="RegessionSuite" duration-ms="104904" started-at="2019-01-30T09:23:14Z" finished-at="2019-01-30T09:24:59Z">
+    <groups>
+    </groups>
+    <test name="Login cases" duration-ms="104904" started-at="2019-01-30T09:23:14Z" finished-at="2019-01-30T09:24:59Z">
+      <class name="Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login">
+        <test-method status="PASS" signature="loadBean()[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="loadBean" is-config="true" duration-ms="1117" started-at="2019-01-30T16:23:13Z" finished-at="2019-01-30T16:23:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadBean -->
+        <test-method status="PASS" signature="loadParam(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="loadParam" is-config="true" duration-ms="2" started-at="2019-01-30T16:23:14Z" finished-at="2019-01-30T16:23:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[samsung_c7]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[production]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[qatest999]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Aaaa1111]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[000007E048AF00050DANMNGF]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[KodakCam-F00700050D]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[/dev/ttyAutomation]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Beisiusiu]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1357913500]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loadParam -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="beforeMethod" is-config="true" duration-ms="21025" started-at="2019-01-30T16:23:14Z" finished-at="2019-01-30T16:23:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login.loginWithNotActiveUser()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginWithNotActiveUser()[pri:4, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="loginWithNotActiveUser" duration-ms="80062" started-at="2019-01-30T16:23:35Z" description="TC004: Log in with not active user" finished-at="2019-01-30T16:24:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithNotActiveUser -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02]" name="afterMethod" is-config="true" duration-ms="3660" started-at="2019-01-30T16:24:56Z" finished-at="2019-01-30T16:24:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithNotActiveUser status=SUCCESS method=TM_002_Login.loginWithNotActiveUser()[pri:4, instance:Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login@4a183d02] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login -->
+    </test> <!-- Login cases -->
+  </suite> <!-- RegessionSuite -->
+</testng-results>

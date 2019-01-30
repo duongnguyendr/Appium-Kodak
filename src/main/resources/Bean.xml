@@ -1,0 +1,88 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:annotation-config />			
+	<bean name="android_lucy" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="LucyApp.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="0715f7e8edaf2438" />
+		<property name="deviceName" value="0715f7e8edaf2438" />
+		<property name="deviceVersion" value="7.0" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>		
+	<bean name="android_kodak" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakApp.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="0715f7e8edaf2438" />
+		<property name="deviceName" value="0715f7e8edaf2438" />		
+		<property name="deviceVersion" value="7.0" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>		
+	<bean name="android_kodak_note5" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakApp.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="0715f7e8edaf2438" />
+		<property name="deviceName" value="0715f7e8edaf2438" />		
+		<property name="deviceVersion" value="7.0" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>		
+	<bean name="android_xiaomi_lucy" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="LucyApp.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="4d9a92357d04" />
+		<property name="deviceName" value="4d9a92357d04" />
+		<property name="deviceVersion" value="7.0" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+	<bean name="android_n6_kodak" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakSmartHome.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="D1TGAP9761600110" />
+		<property name="deviceName" value="D1TGAP9761600110" />
+		<property name="deviceVersion" value="8.1" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+	<bean name="android_n6_kodak_wifi_adb" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakApp.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="192.168.1.133:5555" />
+		<property name="deviceName" value="N6_ADB_WIFI" />
+		<property name="deviceVersion" value="8.1" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+	<bean name="android_kodak_dbell" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakSmartHome.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="D1TGAP9761600110" />
+		<property name="deviceName" value="D1TGAP9761600110" />
+		<property name="deviceVersion" value="8.1" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+		<bean name="android_z5c" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakSmartHome.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="CB5A28E81B" />
+		<property name="deviceName" value="CB5A28E81B" />
+		<property name="deviceVersion" value="7.1.1" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+	<bean name="android_nokia_6" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakSmartHome.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="D1TGAP9761600110" />
+		<property name="deviceName" value="Nokia_6" />
+		<property name="deviceVersion" value="8.1.0" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+	<bean name="samsung_c7" class="com.cinatic.driver.DriverSetting">
+		<property name="apk" value="KodakSmartHome.apk" />
+		<property name="platformName" value="Android" />
+		<property name="deviceUDID" value="e571d636" />
+		<property name="deviceName" value="samsung c7" />
+		<property name="deviceVersion" value="8.0.0" />
+		<property name="remoteURL" value="http://127.0.0.1:4723/wd/hub" />	
+	</bean>
+</beans>	

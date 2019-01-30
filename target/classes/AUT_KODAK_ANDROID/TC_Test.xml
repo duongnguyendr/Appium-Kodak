@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="samsung_c7" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qatest999" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000007E048AF00050DANMNGF" />
+	<parameter name="devicessid" value="KodakCam-F00700050D" />
+	<parameter name="comport" value="/dev/ttyAutomation" />
+	<parameter name="wifiname" value="Beisiusiu" />
+	<parameter name="wifipassword" value="1357913500" />
+	<parameter name="wepwifiname" value="Beisiusiu" />
+	<parameter name="wepwifipassword" value="1357913500" />
+	<parameter name="comport1" value="/dev/ttyUSB1" />
+	<parameter name="devicessid1" value="KodakCam-F00700050A" />
+	<parameter name="deviceid1" value="000007E048AF00050ASNMNGF" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="android.kodak.base.KodakCustomizedHTMLReporter" />	
+	</listeners>
+	<test name="Login cases">
+		<classes>
+			<class name="android.kodak.testcases.checklist.TM_002_Login">
+				<methods>
+					<include name="loginWithNotActiveUser"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 

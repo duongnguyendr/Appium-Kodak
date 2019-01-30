@@ -1,0 +1,1 @@
+{"uuid":"8aa6450d-bf5b-4ce8-828a-5d75feb6d89e","name":"RegessionSuite","start":1548840193642,"stop":1548840299690,"children":["9cc6c0d8-0ee5-4489-8895-ee24e6de16e5"],"befores":[{"name":"loadBean","status":"passed","stage":"finished","description":"","start":1548840193689,"stop":1548840194777}]}

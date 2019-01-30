@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_kodak_dbell" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qatest_notactive" />
+	<parameter name="password" value="654321Aa" />
+	<parameter name="deviceid" value="00000350338BF1D289ONOALW" />
+	<parameter name="comport" value="COM7" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Notification_Test">
+		<classes>
+			<class name="android.kodak.testcases.stress.Notification_DB_Test"></class>
+		</classes>
+	</test>
+</suite> 

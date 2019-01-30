@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_lucy" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="minhth" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000005E048AF0000E7FAMNGF" />
+	<parameter name="device_token" value="b0ccb38dfa8ab45182bb1a8532d534c0" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Notification_Test">
+		<classes>
+			<class name="android.kodak.testcases.stress.Notification_Test"></class>
+		</classes>
+	</test>
+</suite> 

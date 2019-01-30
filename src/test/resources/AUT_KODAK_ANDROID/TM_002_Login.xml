@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="samsung_c7" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qatest999" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000007E048AF00050DANMNGF" />
+	<parameter name="devicessid" value="KodakCam-F00700050D"></parameter>
+	<parameter name="comport" value="/dev/ttyUSB0" />
+	<parameter name="wifiname" value="dlink-nxcomm" />
+	<parameter name="wifipassword" value="2244668800" />
+	<listeners>
+		<listener class-name="com.cinatic.report.TestListener" />
+		<listener
+			class-name="com.cinatic.report.AnnotationTransformer" />
+	</listeners>
+	<test name="Login cases">
+		<classes>
+			<class name="android.kodak.testcases.checklist.TM_002_Login">
+				<!-- <methods>
+					<include name="loginWithNotActiveUser"></include>
+				</methods> -->
+			</class>
+		</classes>
+	</test>
+</suite> 

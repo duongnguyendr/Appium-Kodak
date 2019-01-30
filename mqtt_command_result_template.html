@@ -1,0 +1,636 @@
+<html>
+   <head>
+      <title>Result</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <style>	
+         body {
+         font-family: Verdana, Geneva, sans-serif;
+         }
+         table, th, td {			
+         white-space: nowrap;				
+         }        
+         #myInput, #myInputResult {			
+         background-position: 10px 12px; /* Position the search icon */
+         background-repeat: no-repeat; /* Do not repeat the icon image */
+         width: 15%; /* Full-width */
+         font-size: 12px; /* Increase font-size */
+         padding: 5px 9px 5px 19px; /* Add some padding */
+         border: 1px solid #ddd; /* Add a grey border */
+         margin-bottom: 5px; /* Add some space below the input */
+         }
+         #myTable {
+         border-collapse: collapse; /* Collapse borders */
+         width: 100%; /* Full-width */
+         border: 1px solid #ddd; /* Add a grey border */
+         font-size: 13px; /* Increase font-size */	
+         background-color: #f3f0ed;		 		 
+         }
+         #myTable th {
+         text-align: center;	
+         background-color: #47839e;
+         color: white;		 
+         }		 
+         #myTable th, #myTable td {			
+         padding: 8px; /* Add padding */			
+		 border: 1px solid #ddd;
+         }
+         #myTable tr {
+         /* Add a bottom border to all table rows */
+         border-bottom: 1px solid #ddd; 
+         }
+         #myTable tr.header, #myTable tr:hover {
+         /* Add a grey background color to the table header and on hover */
+         background-color: #FDF1C6;
+         }				
+		 #myTable tr.clicked {
+			background-color: #EDB81E;
+	     }
+         #mySummary {
+         border-collapse: collapse; /* Collapse borders */
+         width: 700px; /* Full-width */
+         border: 1px solid #ddd; /* Add a grey border */
+         font-size: 13px; /* Increase font-size */		
+         background-color: antiquewhite;		 
+         }
+         #mySummary th, #myTable td {			
+         padding: 8px; /* Add padding */			
+         }
+         #mySummary th {			
+         text-align: center;	
+         background-color: #734343;
+         color: white;			
+         }
+         #mySummary td {			
+         text-align: center;			
+         }
+      </style>
+      <script type="text/javascript">
+         $(document).ready(function(){
+			 $('#myTable tr').click(function() {
+			  $(this).addClass('clicked').siblings().removeClass('clicked');	 
+			});		 
+			
+			 var sum_total_melody = 0;
+			 var sum_duration_melody = 0;
+			 var sum_passed_melody = 0;
+			 var sum_failed_melody = 0;						 			 
+			 
+			 var sum_total_media = 0;
+			 var sum_duration_media = 0;
+			 var sum_passed_media = 0;
+			 var sum_failed_media = 0;		
+			 
+			 var sum_total_pantilt = 0;
+			 var sum_duration_pantilt = 0;
+			 var sum_passed_pantilt = 0;
+			 var sum_failed_pantilt = 0;	
+
+			 var sum_total_brightness = 0;
+			 var sum_duration_brightness = 0;
+			 var sum_passed_brightness = 0;
+			 var sum_failed_brightness = 0;				 
+			 
+			 var sum_total_contrast = 0;
+			 var sum_duration_contrast = 0;
+			 var sum_passed_contrast = 0;
+			 var sum_failed_contrast = 0;	
+			 
+			 var sum_total_video = 0;
+			 var sum_duration_video = 0;
+			 var sum_passed_video = 0;
+			 var sum_failed_video = 0;	
+			 
+			 var sum_total_vox = 0;
+			 var sum_duration_vox = 0;
+			 var sum_passed_vox = 0;
+			 var sum_failed_vox = 0;	
+			 
+			 var sum_total_temp = 0;
+			 var sum_duration_temp = 0;
+			 var sum_passed_temp = 0;
+			 var sum_failed_temp = 0;	
+			 
+			 var sum_total_motion = 0;
+			 var sum_duration_motion = 0;
+			 var sum_passed_motion = 0;
+			 var sum_failed_motion = 0;	
+			 
+			 var sum_total_flipup = 0;
+			 var sum_duration_flipup = 0;
+			 var sum_passed_flipup = 0;
+			 var sum_failed_flipup = 0;	
+			 
+			 var sum_total_upgrade_firmware = 0;
+			 var sum_duration_upgrade_firmware = 0;
+			 var sum_passed_upgrade_firmware = 0;
+			 var sum_failed_upgrade_firmware = 0;
+			 
+			 var sum_total_setup_camera = 0;
+			 var sum_duration_setup_camera = 0;
+			 var sum_passed_setup_camera = 0;
+			 var sum_failed_setup_camera = 0;			 			 
+			 
+			 var sum_total_other = 0;
+			 var sum_duration_other = 0;
+			 var sum_passed_other = 0;
+			 var sum_failed_other = 0;	
+			 
+			 var sum_total_fake_detection = 0;
+			 var sum_duration_fake_detection = 0;
+			 var sum_passed_fake_detection = 0;
+			 var sum_failed_fake_detection = 0;
+			 
+			 var table = document.getElementById("myTable");
+			 var rows = table.getElementsByTagName("tr");									 
+			 for (var i = 1; i < rows.length; i++) {					
+				strCommand = rows[i].cells[1].innerHTML.toLowerCase();
+				strResult = rows[i].cells[2].innerHTML.toLowerCase();
+				strDuration = rows[i].cells[4].innerHTML.toLowerCase();
+				//melody
+				if (strCommand.indexOf("melody")>=0) {
+					sum_total_melody++;	
+					sum_duration_melody+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_melody++;
+					}
+					else{
+						sum_failed_melody++;
+					}					
+				}
+				else if (strCommand.indexOf("media")>=0) {
+					sum_total_media++;	
+					sum_duration_media+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_media++;
+					}
+					else{
+						sum_failed_media++;
+					}					
+				}
+				else if (strCommand.indexOf("move_")>=0) {
+					sum_total_pantilt++;	
+					sum_duration_pantilt+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_pantilt++;
+					}
+					else{
+						sum_failed_pantilt++;
+					}					
+				}
+				else if (strCommand.indexOf("brightness")>=0) {
+					sum_total_brightness++;	
+					sum_duration_brightness+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_brightness++;
+					}
+					else{
+						sum_failed_brightness++;
+					}					
+				}
+				else if (strCommand.indexOf("contrast")>=0) {
+					sum_total_contrast++;	
+					sum_duration_contrast+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_contrast++;
+					}
+					else{
+						sum_failed_contrast++;
+					}					
+				}
+				else if (strCommand.indexOf("video")>=0) {
+					sum_total_video++;	
+					sum_duration_video+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_video++;
+					}
+					else{
+						sum_failed_video++;
+					}					
+				}
+				else if (strCommand.indexOf("vox")>=0) {
+					sum_total_vox++;	
+					sum_duration_vox+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_vox++;
+					}
+					else{
+						sum_failed_vox++;
+					}					
+				}
+				else if (strCommand.indexOf("temp")>=0) {
+					sum_total_temp++;	
+					sum_duration_temp+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_temp++;
+					}
+					else{
+						sum_failed_temp++;
+					}					
+				}
+				else if (strCommand.indexOf("motion")>=0) {
+					sum_total_motion++;	
+					sum_duration_motion+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_motion++;
+					}
+					else{
+						sum_failed_motion++;
+					}					
+				}
+				else if (strCommand.indexOf("flipup")>=0) {
+					sum_total_flipup++;	
+					sum_duration_flipup+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_flipup++;
+					}
+					else{
+						sum_failed_flipup++;
+					}					
+				}
+				else if (strCommand.indexOf("upgrade firmware")>=0) {
+					sum_total_upgrade_firmware++;	
+					sum_duration_upgrade_firmware+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_upgrade_firmware++;
+					}
+					else{
+						sum_failed_upgrade_firmware++;
+					}					
+				}
+				else if (strCommand.indexOf("setup camera")>=0) {
+					sum_total_setup_camera++;	
+					sum_duration_setup_camera+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_setup_camera++;
+					}
+					else{
+						sum_failed_setup_camera++;
+					}					
+				}				
+				else if (strCommand.indexOf("fake")>=0) {
+					sum_total_fake_detection++;	
+					sum_duration_fake_detection+= parseInt(strDuration);
+					if(strResult=="passed"){
+						sum_passed_fake_detection++;
+					}
+					else{
+						sum_failed_fake_detection++;
+					}
+				}
+				else {
+					sum_total_other++;	
+					sum_duration_other+= parseInt(strDuration);
+				    if(strResult=="passed"){
+						sum_passed_other++;
+					}
+					else{
+						sum_failed_other++;
+					}					
+				}
+											
+				if (strResult == "passed") {
+					rows[i].cells[2].style.color = "#109c29";
+				}
+				else{
+					rows[i].style.color = "#ff1a1a";
+				}
+				
+				rows[i].cells[4].innerHTML = numberWithCommas(rows[i].cells[4].innerHTML);
+			 }						 
+			 $('#sum_total_melody').html(sum_total_melody);
+			 $('#sum_passed_melody').html(sum_passed_melody);
+			 $('#sum_failed_melody').html(numberFailedWithCommasColor(sum_failed_melody));
+			 $('#sum_duration_melody').html(numberWithCommas(sum_duration_melody));
+			 $('#sum_success_melody').html(numberWithCommasColor(sum_passed_melody*100/sum_total_melody));
+			 
+			 $('#sum_total_media').html(sum_total_media);
+			 $('#sum_passed_media').html(sum_passed_media);
+			 $('#sum_failed_media').html(numberFailedWithCommasColor(sum_failed_media));
+			 $('#sum_duration_media').html(numberWithCommas(sum_duration_media));
+			 $('#sum_success_media').html(numberWithCommasColor(sum_passed_media*100/sum_total_media));
+			 
+			 $('#sum_total_pantilt').html(sum_total_pantilt);
+			 $('#sum_passed_pantilt').html(sum_passed_pantilt);
+			 $('#sum_failed_pantilt').html(numberFailedWithCommasColor(sum_failed_pantilt));
+			 $('#sum_duration_pantilt').html(numberWithCommas(sum_duration_pantilt));
+			 $('#sum_success_pantilt').html(numberWithCommasColor(sum_passed_pantilt*100/sum_total_pantilt));
+			 
+			 $('#sum_total_brightness').html(sum_total_brightness);
+			 $('#sum_passed_brightness').html(sum_passed_brightness);
+			 $('#sum_failed_brightness').html(numberFailedWithCommasColor(sum_failed_brightness));
+			 $('#sum_duration_brightness').html(numberWithCommas(sum_duration_brightness));
+			 $('#sum_success_brightness').html(numberWithCommasColor(sum_passed_brightness*100/sum_total_brightness));
+			 
+			 $('#sum_total_contrast').html(sum_total_contrast); 
+			 $('#sum_passed_contrast').html(sum_passed_contrast);
+			 $('#sum_failed_contrast').html(numberFailedWithCommasColor(sum_failed_contrast));
+			 $('#sum_duration_contrast').html(numberWithCommas(sum_duration_contrast));
+			 $('#sum_success_contrast').html(numberWithCommasColor(sum_passed_contrast*100/sum_total_contrast));
+			 
+			 $('#sum_total_video').html(sum_total_video);
+			 $('#sum_passed_video').html(sum_passed_video);
+			 $('#sum_failed_video').html(numberFailedWithCommasColor(sum_failed_video));
+			 $('#sum_duration_video').html(numberWithCommas(sum_duration_video));
+			 $('#sum_success_video').html(numberWithCommasColor(sum_passed_video*100/sum_total_video));
+			 
+			 $('#sum_total_vox').html(sum_total_vox);
+			 $('#sum_passed_vox').html(sum_passed_vox);
+			 $('#sum_failed_vox').html(numberFailedWithCommasColor(sum_failed_vox));
+			 $('#sum_duration_vox').html(numberWithCommas(sum_duration_vox));
+			 $('#sum_success_vox').html(numberWithCommasColor(sum_passed_vox*100/sum_total_vox));
+			 
+			 $('#sum_total_temp').html(sum_total_temp);
+			 $('#sum_passed_temp').html(sum_passed_temp);
+			 $('#sum_failed_temp').html(numberFailedWithCommasColor(sum_failed_temp));
+			 $('#sum_duration_temp').html(numberWithCommas(sum_duration_temp));
+			 $('#sum_success_temp').html(numberWithCommasColor(sum_passed_temp*100/sum_total_temp));
+			 
+			 $('#sum_total_motion').html(sum_total_motion);
+			 $('#sum_passed_motion').html(sum_passed_motion);
+			 $('#sum_failed_motion').html(numberFailedWithCommasColor(sum_failed_motion));
+			 $('#sum_duration_motion').html(numberWithCommas(sum_duration_motion));
+			 $('#sum_success_motion').html(numberWithCommasColor(sum_passed_motion*100/sum_total_motion));
+			 
+			 $('#sum_total_flipup').html(sum_total_flipup);
+			 $('#sum_passed_flipup').html(sum_passed_flipup);
+			 $('#sum_failed_flipup').html(numberFailedWithCommasColor(sum_failed_flipup));
+			 $('#sum_duration_flipup').html(numberWithCommas(sum_duration_flipup));
+			 $('#sum_success_flipup').html(numberWithCommasColor(sum_passed_flipup*100/sum_total_flipup));
+			 
+			 $('#sum_total_upgrade_firmware').html(sum_total_upgrade_firmware);
+			 $('#sum_passed_upgrade_firmware').html(sum_passed_upgrade_firmware);
+			 $('#sum_failed_upgrade_firmware').html(numberFailedWithCommasColor(sum_failed_upgrade_firmware));
+			 $('#sum_duration_upgrade_firmware').html(numberWithCommas(sum_duration_upgrade_firmware));
+			 $('#sum_success_upgrade_firmware').html(numberWithCommasColor(sum_passed_upgrade_firmware*100/sum_total_upgrade_firmware));
+			 
+			 $('#sum_total_setup_camera').html(sum_total_setup_camera);
+			 $('#sum_passed_setup_camera').html(sum_passed_setup_camera);
+			 $('#sum_failed_setup_camera').html(numberFailedWithCommasColor(sum_failed_setup_camera));
+			 $('#sum_duration_setup_camera').html(numberWithCommas(sum_duration_setup_camera));
+			 $('#sum_success_setup_camera').html(numberWithCommasColor(sum_passed_setup_camera*100/sum_total_setup_camera));			 			
+			 
+			 $('#sum_total_other').html(sum_total_other);
+			 $('#sum_passed_other').html(sum_passed_other);
+			 $('#sum_failed_other').html(numberFailedWithCommasColor(sum_failed_other));
+			 $('#sum_duration_other').html(numberWithCommas(sum_duration_other));
+			 $('#sum_success_other').html(numberWithCommasColor(sum_passed_other*100/sum_total_other));
+			 
+			 $('#sum_total_fake_detection').html(sum_total_fake_detection);
+			 $('#sum_passed_fake_detection').html(sum_passed_fake_detection);
+			 $('#sum_failed_fake_detection').html(numberFailedWithCommasColor(sum_failed_fake_detection));
+			 $('#sum_duration_fake_detection').html(numberWithCommas(sum_duration_fake_detection));
+			 $('#sum_success_fake_detection').html(numberWithCommasColor(sum_passed_fake_detection*100/sum_total_fake_detection));
+         });
+               
+         function myFormat(){
+          
+         }
+		 
+		 function setClipboard(e){								
+			copyToClipboard($(e).parent().parent().find("td:eq(8)"));		
+		 }
+	 
+		function copyToClipboard(element) {
+		    var $temp = $("<input>");
+		    $("body").append($temp);
+		    $temp.val($(element).text()).select();
+		    document.execCommand("copy");
+		    $temp.remove();
+		}
+
+	   function myFunction() {
+		 // Declare variables 
+		 var input, filter, table, tr, td, i;
+		 input = document.getElementById("myInput");
+		 inputResult = document.getElementById("myInputResult");
+		 filter = input.value.toUpperCase();
+		 filterResult = inputResult.value.toUpperCase();
+		 table = document.getElementById("myTable");
+		 tr = table.getElementsByTagName("tr");
+	   
+		 // Loop through all table rows, and hide those who don't match the search query
+		 for (i = 0; i < tr.length; i++) {
+		td = tr[i].getElementsByTagName("td")[1];
+		tdResult = tr[i].getElementsByTagName("td")[2];
+		if (td) {
+		  if (td.innerHTML.toUpperCase().indexOf(filter) > -1 && tdResult.innerHTML.toUpperCase().indexOf(filterResult) > -1) {
+			tr[i].style.display = "";
+		  } else {
+			tr[i].style.display = "none";
+		  }
+		} 
+		 }		   		   
+	   }		
+         
+          function numberWithCommas(x) {
+                 return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          }           
+		  
+		  function numberWithCommasColor(x) {	
+		   x = Math.round(x);
+           if (x == 100)
+               return "<span style='color:green;font-weight:bold;'>" + x.toString() + "%</span>";           
+		   else if(x >= 0 && x <= 99)
+			   return "<span style='color:black;font-weight:bold;'>" + x.toString() + "%</span>";
+		   else
+			   return "";
+		 }
+		 
+		 function numberFailedWithCommasColor(x) {			  
+           if (x > 0)
+               return "<span style='color:red;font-weight:bold;'>" + x.toString() + "</span>";          
+		   else
+			   return x;
+		 }		 		 	
+      </script>
+   </head>
+   <body>
+      <h1 style="text-align:center;color:#264192;">TEST REPORT</h1>
+      <hr style="width:300px;align:left;">
+      <h3>
+      Summary:
+      <h3>
+      <table style="padding-bottom:100px;" id="mySummary">
+         <tr class="header">
+            <th>Function</th>
+            <th>Total Run</th>
+            <th>Passed</th>
+            <th>Failed</th>
+            <th>Duration (ms)</th>
+			<th>Success Rate</th>
+         </tr>
+		 <tr>
+            <td>Upgrade Firmware</td>
+            <td id="sum_total_upgrade_firmware">0</td>
+            <td id="sum_passed_upgrade_firmware">0</td>
+            <td id="sum_failed_upgrade_firmware">0</td>
+            <td id="sum_duration_upgrade_firmware">0</td>
+			<td id="sum_success_upgrade_firmware">0</td>
+         </tr>
+		 <tr>
+            <td>Setup Camera</td>
+            <td id="sum_total_setup_camera">0</td>
+            <td id="sum_passed_setup_camera">0</td>
+            <td id="sum_failed_setup_camera">0</td>
+            <td id="sum_duration_setup_camera">0</td>
+			<td id="sum_success_setup_camera">0</td>
+         </tr>
+		 <tr>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+			<td>===========</td>
+         </tr>		
+         <tr>
+            <td>Melody</td>
+            <td id="sum_total_melody">0</td>
+            <td id="sum_passed_melody">0</td>
+            <td id="sum_failed_melody">0</td>
+            <td id="sum_duration_melody">0</td>
+			<td id="sum_success_melody">0</td>
+         </tr>
+		<tr>
+            <td>Media</td>
+            <td id="sum_total_media">0</td>
+            <td id="sum_passed_media">0</td>
+            <td id="sum_failed_media">0</td>
+            <td id="sum_duration_media">0</td>
+			<td id="sum_success_media">0</td>
+         </tr>
+		 <tr>
+            <td>PanTilt</td>
+            <td id="sum_total_pantilt">0</td>
+            <td id="sum_passed_pantilt">0</td>
+            <td id="sum_failed_pantilt">0</td>
+            <td id="sum_duration_pantilt">0</td>
+			<td id="sum_success_pantilt">0</td>
+         </tr>
+		 <tr>
+			<td>Brightness</td>
+			<td id="sum_total_brightness">0</td>
+			<td id="sum_passed_brightness">0</td>
+			<td id="sum_failed_brightness">0</td>
+			<td id="sum_duration_brightness">0</td>
+			<td id="sum_success_brightness">0</td>
+		 </tr>
+		 <tr>
+			<td>Contrast</td>
+			<td id="sum_total_contrast">0</td>
+			<td id="sum_passed_contrast">0</td>
+			<td id="sum_failed_contrast">0</td>
+			<td id="sum_duration_contrast">0</td>
+			<td id="sum_success_contrast">0</td>
+		 </tr>
+		 <tr>
+			<td>Video</td>
+			<td id="sum_total_video">0</td>
+			<td id="sum_passed_video">0</td>
+			<td id="sum_failed_video">0</td>
+			<td id="sum_duration_video">0</td>
+			<td id="sum_success_video">0</td>
+		 </tr>
+		 <tr>
+			<td>Vox</td>
+			<td id="sum_total_vox">0</td>
+			<td id="sum_passed_vox">0</td>
+			<td id="sum_failed_vox">0</td>
+			<td id="sum_duration_vox">0</td>
+			<td id="sum_success_vox">0</td>
+		 </tr>
+		 <tr>
+			<td>Temp</td>
+			<td id="sum_total_temp">0</td>
+			<td id="sum_passed_temp">0</td>
+			<td id="sum_failed_temp">0</td>
+			<td id="sum_duration_temp">0</td>
+			<td id="sum_success_temp">0</td>
+		 </tr>
+		 <tr>
+			<td>Motion</td>
+			<td id="sum_total_motion">0</td>
+			<td id="sum_passed_motion">0</td>
+			<td id="sum_failed_motion">0</td>
+			<td id="sum_duration_motion">0</td>
+			<td id="sum_success_motion">0</td>
+		 </tr>
+		 <tr>
+			<td>Flipup</td>
+			<td id="sum_total_flipup">0</td>
+			<td id="sum_passed_flipup">0</td>
+			<td id="sum_failed_flipup">0</td>
+			<td id="sum_duration_flipup">0</td>
+			<td id="sum_success_flipup">0</td>
+		 </tr>
+		 <tr>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+			<td>===========</td>
+         </tr>	
+		 <tr>
+			<td>Other</td>
+			<td id="sum_total_other">0</td>
+			<td id="sum_passed_other">0</td>
+			<td id="sum_failed_other">0</td>
+			<td id="sum_duration_other">0</td>
+			<td id="sum_success_other">0</td>
+		 </tr>
+		 <tr>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+			<td>===========</td>
+         </tr>		
+		 <tr>
+            <td></td>
+            <td></td>
+            <td style="color:blue;font-weight:bold;">Fake Detection</td>
+            <td></td>
+            <td></td>
+			<td></td>
+         </tr>	
+		<tr>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+            <td>===========</td>
+			<td>===========</td>
+         </tr>	
+		  <tr>
+			<td>Fake Detection</td>
+			<td id="sum_total_fake_detection">0</td>
+			<td id="sum_passed_fake_detection">0</td>
+			<td id="sum_failed_fake_detection">0</td>
+			<td id="sum_duration_fake_detection">0</td>
+			<td id="sum_success_fake_detection">0</td>
+		 </tr>
+      </table>
+      </br>	  
+      <h3>
+      Detail:
+      <h3>
+      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for commands..">
+      <input type="text" id="myInputResult" onkeyup="myFunction()" placeholder="Search for result..">
+      <table id="myTable">
+         <tr class="header">
+            <th>#</th>
+            <th>Command</th>            
+            <th>Result</th>
+            <th>StartTime</th>
+            <th>Duration (ms)</th>
+            <th>Expected result</th>
+            <th>Actual result</th>			
+			<th></th>
+            <th>Response</th>	
+         </tr>
+         <!--Details-->
+      </table>      
+   </body>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_c7_kodak" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qa_automation_hk_1" />
+	<parameter name="password" value="123123Aa" />
+	<parameter name="deviceid" value="000005E048AF0009F0ANMNGF" />
+	<parameter name="devicessid" value="KodakCam-C0050009F0" />
+	<parameter name="comport" value="/dev/ttyAutomation" />
+	<parameter name="wifiname" value="Beisiusiu" />
+	<parameter name="wifipassword" value="1357913500" />
+	<parameter name="wepwifiname" value="Beisiusiu" />
+	<parameter name="wepwifipassword" value="1357913500" />
+	<parameter name="comport1" value="/dev/ttyUSB1" />
+	<parameter name="devicessid1" value="KodakCam-F00700050A" />
+	<parameter name="deviceid1" value="000007E048AF00050ASNMNGF" />
+	<listeners>
+<!-- 		<listener class-name="org.uncommons.reportng.HTMLReporter" /> -->
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="android.kodak.base.KodakCustomizedHTMLReporter" />		
+	</listeners>
+	<test name="Release Checklist">
+<!-- 		<classes> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TC_0_Enable_debug"></class>		 -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_001_SignUp"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_002_Login"></class>		 -->
+<!--  			<class name="android.kodak.testcases.checklist.TM_003_Setup"></class>  -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_004_TalkBack"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_005_MuteSound"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_006_CaptureImage"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_007_RecordVideo"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_008_PlayMelody"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_009_Detail"></class> -->
+<!-- 			<class name="android.kodak.testcases.checklist.TM_010_Setting"></class> -->
+<!-- 		</classes> -->
+		<packages>
+		    <package name="android.kodak.testcases.checklist"> </package>		    
+		</packages>
+	</test>
+</suite> 

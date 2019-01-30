@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_n6_kodak" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qatest999" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000008E048AF00263CWAMNGF" />
+	<parameter name="devicessid" value="KodakCam-F00800263C" />
+	<parameter name="comport" value="/dev/ttyUSB0" />
+	<parameter name="wifiname" value="dlink-nxcomm" />
+	<parameter name="wifipassword" value="22446688" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Talk back">
+		<classes>
+			<class name="android.kodak.testcases.checklist.TM_004_TalkBack"></class>		
+		</classes>
+	</test>
+</suite> 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Login cases"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="79.482">
+  <properties />
+  
+  
+            <testcase name="loginWithNotActiveUser" time="79.482" classname="Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login" />
+      
+</testsuite>

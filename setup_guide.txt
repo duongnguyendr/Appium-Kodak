@@ -1,0 +1,26 @@
+## Linux 
+		$ sudo apt install nodejs maven groovy
+		$ npm install -g appium
+		$
+	If having problem while eclipse building the project, run this:
+		$ mvn -U clean install 
+	Environment variable
+		NODE_BINARY_PATH=/usr/bin/node
+		APPIUM_BINARY_PATH=/usr/local/bin/appium
+		JAVA_HOME=[path to JDK - it's the best to use JDK, not JRE]
+		ANDROID_HOME=[path to android sdk]
+		PATH=$JAVA_HOME/bin:$ANDROID_HOME/platform-tools:$PATH
+		CINATIC_AUTOMATION_RESOURCE=[path to automation resource file]
+		## CINATIC_AUTOMATION_RESOURCE should contains:
+			├── app
+			│   ├── KodakSmartHome.apk
+			├── chromedriver-linux
+			│   └── chromedriver
+			└── chromedriver-windows
+			    ├── chromedriver.exe
+			    ├── grep.exe
+			    ├── libiconv2.dll
+			    ├── libintl3.dll
+			    ├── pcre3.dll
+			    └── regex2.dll
+					

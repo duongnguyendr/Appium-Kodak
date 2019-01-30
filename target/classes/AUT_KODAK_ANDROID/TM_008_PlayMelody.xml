@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_nokia_6" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qatest999" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000007E048AF00050DANMNGF" />
+	<parameter name="devicessid" value="KodakCam-F00700050D"></parameter>
+	<parameter name="comport" value="/dev/ttyUSB0" />
+	<parameter name="wifiname" value="dlink-nxcomm" />
+	<parameter name="wifipassword" value="2244668800" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener
+			class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Play Melodyies">
+		<classes>
+			<class
+				name="android.kodak.testcases.checklist.TM_008_PlayMelody">
+				<methods>
+					<include name="verifyEnableTalkbackWhilePlayMelody"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 

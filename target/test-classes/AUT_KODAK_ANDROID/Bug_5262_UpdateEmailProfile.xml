@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_nokia_6" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="songnhi406" />
+	<parameter name="password" value="Songnhi407" />
+	<parameter name="deviceid" value="D1TGAP9761600110" />
+	<parameter name="devicessid" value="KodakCam-F007000592" />
+	<parameter name="comport" value="/dev/ttyUSB0" />
+	<parameter name="wifiname" value="Beisiusiu" />
+	<parameter name="wifipassword" value="1357913500" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>	
+	<test name="Camera setting">
+		<classes>		
+			<class name="android.kodak.testcases.bugs.Bug_5262_UpdateEmailProfile"></class>
+		</classes>
+	</test>
+</suite> 

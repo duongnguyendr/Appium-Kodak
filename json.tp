@@ -1,0 +1,31 @@
+"attributes": {
+    "alarm": "string",
+    "dogbarks": "string",
+    "dur": "string",
+    "duty_cycle": "string",
+    "manual_rec": "string",
+    "manual_snap": "string",
+    "mode": "string",
+    "mvr_toggle_attributes": {
+      "grid": "string",
+      "zone": "string"
+    },
+    "rec": "string",
+    "setup": "string",
+    "snap": "string",
+    "stream_name": "string",
+    "streaming_attributes": {
+      "client_nat_ip": "string",
+      "client_nat_port": "string",
+      "mode": "string",
+      "stream_id": "string",
+      "time_stamp": "string",
+      "year": "string"
+    },
+    "tag_attributes": {
+      "tag_id": "string",
+      "tag_mac": "string",
+      "tag_type": "string"
+    },
+    "value": "string"
+  }

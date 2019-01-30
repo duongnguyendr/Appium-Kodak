@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_kodak" />
+	<parameter name="server" value="HK" />
+	<parameter name="username" value="minhkodak" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000005E048AF000916UNMNGF" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Streaming_Test">
+		<classes>
+			<class name="android.kodak.testcases.stress.PlayMotionClip_Test"></class>
+		</classes>
+	</test>
+</suite> 

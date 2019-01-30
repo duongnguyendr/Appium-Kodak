@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+<parameter name="platform" value="android_s6_kodak" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="qa_automation_us_1" />
+	<parameter name="password" value="123123Aa" />
+	<parameter name="deviceid" value="000005E048AF0009F0ANMNGF" />
+	<parameter name="devicessid" value="KodakCam-C0050009F0" />
+	<parameter name="comport" value="/dev/ttyUSB1" />
+	<parameter name="wifiname" value="Beisiusiu" />
+	<parameter name="wifipassword" value="1357913500" />	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Setup_Test">
+		<classes>
+			<class name="android.kodak.testcases.stress.Setup_Test"></class>
+		</classes>
+	</test>
+</suite> 

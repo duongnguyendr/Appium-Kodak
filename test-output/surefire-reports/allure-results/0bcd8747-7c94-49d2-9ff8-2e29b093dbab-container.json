@@ -1,0 +1,1 @@
+{"uuid":"0bcd8747-7c94-49d2-9ff8-2e29b093dbab","name":"Android_Test_Kodak.android.kodak.testcases.checklist.TM_002_Login","start":1548838395297,"stop":1548838490710,"children":["49560158-fd46-4ed5-b862-a9d4650124bc"],"befores":[{"name":"loadParam","status":"passed","stage":"finished","description":"","start":1548838395305,"stop":1548838395305}]}

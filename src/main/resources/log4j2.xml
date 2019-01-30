@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+	<properties>
+		<property name="patternlayout">%d{MM-dd-yyyy h:mm:ss a} [%level] -%logger%thd
+			- %m%n</property>
+		<property name="debugfilename">test-output/Logs/cinatic-debug.log</property>
+		<property name="filenamePattern">test-output/Logs/cinatic-%d{MM-dd-yyyy}-%i.log.zip
+		</property>
+	</properties>
+	<Appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+		</Console>
+		<RollingFile name="DebugRollingFile" fileName="${debugfilename}"
+			filePattern="${filenamePattern}" append="true">
+			<PatternLayout pattern="${patternlayout}" />
+			<Policies>
+				<TimeBasedTriggeringPolicy />
+				<SizeBasedTriggeringPolicy size="100 MB" />
+			</Policies>
+		</RollingFile>
+	</Appenders>
+	<Loggers>
+		<Root level="info">
+			<AppenderRef ref="DebugRollingFile" level="info" />
+			<AppenderRef ref="Console" level="info" />
+		</Root>
+	</Loggers>
+</Configuration>

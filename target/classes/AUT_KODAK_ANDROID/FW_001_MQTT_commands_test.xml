@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+    <parameter name="username" value="thachhk_fw_automation" />
+    <parameter name="password" value="123123Aa" />
+	<!-- region:
+				production
+				ST (staging)
+	-->
+    <parameter name="region" value="production" />
+    <parameter name="commandFile" value="C520_commands.txt" />
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="MQTT command test">
+		<classes>
+			<class name="com.cinatic.test.camera.SendMqttCommandTest"></class>		
+		</classes>
+	</test>
+</suite> 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="RegessionSuite" verbose="1">
+	<parameter name="platform" value="android_lucy" />
+	<parameter name="server" value="production" />
+	<parameter name="username" value="minhth" />
+	<parameter name="password" value="Aaaa1111" />
+	<parameter name="deviceid" value="000005E048AF0000D5PAMNGF" />
+	<parameter name="devicessid" value="Camera-VA0050000D5" />
+	<parameter name="comport" value="COM3" />
+	<parameter name="wifiname" value="ASUS1" />
+	<parameter name="wifipassword" value="2608208899" />	
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+	<test name="Setup_Camera_Test">
+		<classes>
+			<class name="android.kodak.testcases.stress.Setup_Camera_Test"></class>
+		</classes>
+	</test>
+</suite> 
